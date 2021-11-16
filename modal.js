@@ -1,9 +1,9 @@
-/* =============================================
+/*==============================================
 *  modal.js Version 0.1
 *  The MIT Licence
 *  (C) 2021 Kenta Asahi
 *  https://github.com/18t2003g/modal.js
-*  ===========================================*/
+*=============================================*/
 
 //shadow
 const shadowDiv = document.createElement("div");
@@ -27,10 +27,8 @@ class Modal{
         this.DOMobj.style.position = "fixed";
         this.DOMobj.style.zIndex = "255";
         //top leftの初期値を中央に指定してメンバ変数で変更可能に
-        // this.DOMobj.style.left = "calc((100vw - " + this.DOMobj.style.width + "px) / 2)";
-        // this.DOMobj.style.top = "calc((100vh - " + this.DOMobj.style.height + "px) / 2)";
-        this.DOMobj.style.left = (window.innerWidth - this.DOMobj.style.width) / 2 + "px";
-        this.DOMobj.style.top = (window.innerHeight - this.DOMobj.style.height) / 2 + "px";
+        this.DOMobj.style.left = "calc((100vw - " + this.DOMobj.offsetWidth + "px) / 2)";
+        this.DOMobj.style.top = "calc((100vh - " + this.DOMobj.offsetHeight + "px) / 2)";
         this.shadow = false;
     }
 
