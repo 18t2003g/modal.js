@@ -5,8 +5,41 @@
     <title>modal.js DEMO</title>
     <script src="./modal.js"></script>
     <link rel="stylesheet" href="./modal-js.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const modal = new Modal(document.getElementById("modalWin"));
+            modal.shadow = true;
+            document.getElementById("btn").addEventListener("click", function(){
+                modal.show();
+            });
+            document.getElementById("modalWin").addEventListener("click", function(){
+                modal.hide();
+            });
+        });
+    </script>
+    <style>
+        body{
+            margin: 0;
+        }
+        #modalWin{
+            width: 30vw;
+            height: 30vh;
+            border: 1px solid red;
+            background-color: white;
+            border-radius: 0.5em;
+            box-shadow: 1px 1px 3px 1px gray;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <h1>modal.js demo</h1>
+    <p>You can make modal windows using following code!</p>
+    <p>Click <input type="button" id="btn" value="here"> to show modal window.</p>
 
+    <div id="modalWin">
+        <p>This is a modal window.</p>
+        <p>Click me to close!</p>
+    </div>
 </body>
 </html>
