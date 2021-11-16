@@ -26,6 +26,7 @@ class Modal{
         this.DOMobj.style.visibility = "hidden";
         this.DOMobj.style.position = "fixed";
         this.DOMobj.style.zIndex = "255";
+        //top leftの初期値を中央に指定してメンバ変数で変更可能に
         // this.DOMobj.style.left = "calc((100vw - " + this.DOMobj.style.width + "px) / 2)";
         // this.DOMobj.style.top = "calc((100vh - " + this.DOMobj.style.height + "px) / 2)";
         this.DOMobj.style.left = (window.innerWidth - this.DOMobj.style.width) / 2 + "px";
@@ -35,8 +36,10 @@ class Modal{
 
     //show modal window
     show(){
-        if(this.shadow == true){
+        if(document.getElementById("modal-js-shadow") == null){
             document.body.appendChild(shadowDiv);
+        }
+        if(this.shadow == true){
             document.getElementById("modal-js-shadow").style.visibility = "visible";
         }
         this.DOMobj.style.visibility = "visible";
