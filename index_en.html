@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>modal.js DEMO</title>
+    <script src="./modal.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = new Modal(document.getElementById("modalWin"));
+            modal.shadow = true;
+            document.getElementById("btn").addEventListener("click", function () {
+                modal.show();
+            });
+            document.getElementById("modalWin").addEventListener("click", function () {
+                modal.hide();
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            background-color: wheat;
+            font-family: sans-serif;
+        }
+        main {
+            box-sizing: border-box;
+            max-width: 700px;
+            height: 100vh;
+            margin: 0 auto;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+            padding: 1em;
+            box-shadow: 1px 1px 3px 1px gray;
+            background-color: white;
+        }
+        #modalWin {
+            width: 30vw;
+            height: 30vh;
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 0.5em;
+            box-shadow: 1px 1px 3px 1px gray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Modal.js</h1>
+        <p>You can make elements modal windows using following codes!
+            <code><pre>
+                // Create Isntance
+                const modal = new Modal(document.getElementById("ID-of-element"));
+
+                // If you want shadow
+                modal.shadow = true;
+
+                // Open Modal Window
+                modal.show();
+
+                // Close Modal Window
+                modal.hide();
+            </pre></code>
+        </p>
+        <p><input type="button" id="btn" value="Click here"> to see a demo window.</p>
+        <p>More information, see <a href="https://github.com/18t2003g/modal.js">https://github.com/18t2003g/modal.js</a>.</p>
+    </main>
+    <div id="modalWin">
+        <p>This is a modal window.</p>
+        <p>Click me to close!</p>
+    </div>
+</body>
+
+</html>
