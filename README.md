@@ -1,7 +1,7 @@
 # Modal.js
 
 ### About
-Modal Windowを作成するためのjavacriptライブラリです。
+Modal Windowを作成するためのjavascriptライブラリです。
 [サンプルページ](https://18t2003g.github.io/modal.js/)
 
 ### 使用例
